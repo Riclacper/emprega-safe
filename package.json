@@ -1,0 +1,23 @@
+{
+  "name": "emprega-safe",
+  "version": "1.0.0",
+  "description": "Sistema de verificação de vagas de emprego com foco na identificação de anúncios fraudulentos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "empregabilidade",
+    "fraude",
+    "vagas",
+    "node",
+    "express"
+  ],
+  "author": "Ricardo Lacerda Pereira",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.21.2"
+  }
+}

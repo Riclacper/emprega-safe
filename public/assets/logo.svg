@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F7CFF"></stop>
+      <stop offset="100%" stop-color="#2A4BFF"></stop>
+    </linearGradient>
+  </defs>
+
+  <rect x="10" y="10" width="100" height="100" rx="22" fill="url(#grad)"></rect>
+
+  <path d="M60 30
+           L85 40
+           V60
+           C85 75 72 88 60 92
+           C48 88 35 75 35 60
+           V40
+           Z" fill="white"></path>
+
+  <path d="M48 60 L56 68 L72 50" stroke="#2A4BFF" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

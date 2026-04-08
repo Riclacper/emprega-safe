@@ -1,0 +1,38 @@
+[
+  {
+    "id": "REP-1001",
+    "createdAt": "2026-03-12T22:44:39.503Z",
+    "analysisId": "ANL-1002",
+    "company": "Empresa Confidencial",
+    "link": "https://bit.ly/vaga-digitador-urgente",
+    "reason": "Cobrança indevida para participar da vaga",
+    "details": "O anúncio pede pagamento via PIX antes de qualquer entrevista."
+  },
+  {
+    "id": "REP-1002",
+    "createdAt": "2026-03-12T22:48:15.000Z",
+    "analysisId": "ANL-1008",
+    "company": "Grupo Premium Digital",
+    "link": "https://premiumdigitalltd-job.net",
+    "reason": "Promessa de renda irreal e indício de golpe",
+    "details": "A vaga promete remuneração muito acima do mercado e não apresenta informações confiáveis sobre a empresa."
+  },
+  {
+    "id": "REP-1003",
+    "createdAt": "2026-03-12T22:51:42.000Z",
+    "analysisId": "ANL-1011",
+    "company": "Não informada",
+    "link": "https://ganhos-imediatos-vagas.biz",
+    "reason": "Anúncio com linguagem apelativa e empresa ausente",
+    "details": "A vaga não informa empresa responsável e usa promessa exagerada de ganhos rápidos."
+  },
+  {
+    "id": "REP-1004",
+    "createdAt": "2026-03-12T22:55:08.000Z",
+    "analysisId": "ANL-1013",
+    "company": "Start Business Group",
+    "link": "https://startbusiness-group.org/jobs",
+    "reason": "Falta de transparência no processo seletivo",
+    "details": "O anúncio informa contratação imediata, mas não detalha etapas, validação institucional ou responsável pelo recrutamento."
+  }
+]

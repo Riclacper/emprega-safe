@@ -1,0 +1,244 @@
+[
+  {
+    "id": "ANL-1001",
+    "createdAt": "2026-03-12T17:24:39.501Z",
+    "title": "Assistente Administrativo Home Office",
+    "company": "Grupo Solidez",
+    "salary": 3200,
+    "contact": "recrutamento@gruposolidez.com.br",
+    "link": "https://gruposolidez.com.br/vagas/assistente-adm",
+    "description": "Vaga com atividades administrativas, atendimento por e-mail, suporte em planilhas e contato com equipe interna.",
+    "score": 12,
+    "classification": "Confiável",
+    "badge": "baixo",
+    "reasons": [
+      "Nenhum sinal crítico foi identificado na análise automática inicial."
+    ],
+    "recommendation": "Ainda assim, confirme CNPJ, domínio da empresa e contato oficial antes de enviar documentos."
+  },
+  {
+    "id": "ANL-1002",
+    "createdAt": "2026-03-12T20:24:39.502Z",
+    "title": "Digitador Urgente Sem Experiência",
+    "company": "Empresa Confidencial",
+    "salary": 14500,
+    "contact": "selecaovagas2026@gmail.com",
+    "link": "https://bit.ly/vaga-digitador-urgente",
+    "description": "Contratação imediata. Ganhos garantidos. Enviar CPF e pagar taxa de treinamento por PIX ainda hoje.",
+    "score": 88,
+    "classification": "Potencialmente fraudulenta",
+    "badge": "alto",
+    "reasons": [
+      "Há indício de cobrança, pagamento ou transferência para participar do processo seletivo.",
+      "A empresa não está claramente identificada.",
+      "A remuneração informada está muito acima do padrão comum e exige validação adicional.",
+      "A vaga solicita dados pessoais sensíveis antes de uma validação formal da empresa.",
+      "O link informado é ausente ou usa encurtadores/canais menos confiáveis."
+    ],
+    "recommendation": "Evite avançar no contato, não realize pagamentos e confirme a legitimidade em canais oficiais."
+  },
+  {
+    "id": "ANL-1003",
+    "title": "Desenvolvedor Front-End Júnior",
+    "company": "TechNova Solutions",
+    "classification": "Confiável",
+    "badge": "baixo",
+    "score": 18,
+    "recommendation": "A vaga apresenta baixo risco. Ainda assim, confirme dados da empresa e canal oficial de contato.",
+    "reasons": [
+      "Empresa claramente identificada.",
+      "Faixa salarial compatível com o mercado.",
+      "Descrição objetiva e sem pedidos indevidos."
+    ],
+    "salary": 3200,
+    "link": "https://technova.com/vagas/frontend-jr",
+    "createdAt": "2026-03-01T10:15:00.000Z"
+  },
+  {
+    "id": "ANL-1004",
+    "title": "Analista de Suporte Help Desk",
+    "company": "InfoDesk Brasil",
+    "classification": "Confiável",
+    "badge": "baixo",
+    "score": 24,
+    "recommendation": "A vaga parece legítima. Verifique apenas a autenticidade do domínio e o recrutador.",
+    "reasons": [
+      "Empresa informada com clareza.",
+      "Não há cobrança para participar do processo.",
+      "Descrição compatível com a função."
+    ],
+    "salary": 2600,
+    "link": "https://infodesk.com.br/carreiras",
+    "createdAt": "2026-03-02T14:20:00.000Z"
+  },
+  {
+    "id": "ANL-1005",
+    "title": "Estágio em Desenvolvimento Web",
+    "company": "HubCode Academy",
+    "classification": "Suspeita",
+    "badge": "medio",
+    "score": 46,
+    "recommendation": "A vaga exige verificação adicional. Confirme CNPJ, site oficial e identidade do recrutador.",
+    "reasons": [
+      "A empresa não está claramente identificada.",
+      "Há inconsistências no anúncio.",
+      "Contato do recrutador pouco verificável."
+    ],
+    "salary": 1800,
+    "link": "https://hubcode-vagas.net/estagio",
+    "createdAt": "2026-03-03T09:45:00.000Z"
+  },
+  {
+    "id": "ANL-1006",
+    "title": "Assistente Administrativo Home Office",
+    "company": "",
+    "classification": "Suspeita",
+    "badge": "medio",
+    "score": 52,
+    "recommendation": "Evite avançar sem validar a empresa. Há sinais de risco moderado no anúncio.",
+    "reasons": [
+      "Empresa não informada.",
+      "Promessa vaga de contratação imediata.",
+      "Baixa transparência nas informações."
+    ],
+    "salary": 3500,
+    "link": "https://vaga-rapida-job.com/assistente",
+    "createdAt": "2026-03-04T11:05:00.000Z"
+  },
+  {
+    "id": "ANL-1007",
+    "title": "Programador Python Remoto",
+    "company": "Future Tech Labs",
+    "classification": "Confiável",
+    "badge": "baixo",
+    "score": 20,
+    "recommendation": "O risco é baixo. Continue apenas usando canais oficiais da empresa.",
+    "reasons": [
+      "Descrição profissional e objetiva.",
+      "Empresa identificada.",
+      "Sem solicitação de pagamentos."
+    ],
+    "salary": 5400,
+    "link": "https://futuretechlabs.com/jobs/python",
+    "createdAt": "2026-03-05T08:30:00.000Z"
+  },
+  {
+    "id": "ANL-1008",
+    "title": "Digitador Home Office",
+    "company": "Grupo Premium Digital",
+    "classification": "Fraudulenta",
+    "badge": "alto",
+    "score": 82,
+    "recommendation": "Não prossiga. Há forte indício de golpe e coleta indevida de dados.",
+    "reasons": [
+      "Há indício de cobrança, pagamento ou transferência para participar do processo seletivo.",
+      "A empresa não está claramente identificada.",
+      "A remuneração informada está muito acima do padrão comum e exige validação adicional."
+    ],
+    "salary": 8900,
+    "link": "https://premiumdigitalltd-job.net",
+    "createdAt": "2026-03-06T13:40:00.000Z"
+  },
+  {
+    "id": "ANL-1009",
+    "title": "Auxiliar de RH",
+    "company": "RH Conecta",
+    "classification": "Confiável",
+    "badge": "baixo",
+    "score": 22,
+    "recommendation": "Vaga com baixo risco. Ainda assim, mantenha a validação de canais oficiais.",
+    "reasons": [
+      "Empresa identificada.",
+      "Salário plausível.",
+      "Sem sinais evidentes de fraude."
+    ],
+    "salary": 2400,
+    "link": "https://rhconecta.com.br/vagas",
+    "createdAt": "2026-03-07T15:10:00.000Z"
+  },
+  {
+    "id": "ANL-1010",
+    "title": "Analista de Dados Júnior",
+    "company": "Insight BI",
+    "classification": "Confiável",
+    "badge": "baixo",
+    "score": 28,
+    "recommendation": "A vaga parece legítima. Prossiga apenas por canais institucionais.",
+    "reasons": [
+      "Empresa e vaga compatíveis com o mercado.",
+      "Descrição clara.",
+      "Sem pedidos sensíveis logo no início."
+    ],
+    "salary": 4100,
+    "link": "https://insightbi.com/carreiras",
+    "createdAt": "2026-03-08T09:00:00.000Z"
+  },
+  {
+    "id": "ANL-1011",
+    "title": "Trabalhe pelo celular e ganhe R$ 12.000 por semana",
+    "company": "",
+    "classification": "Fraudulenta",
+    "badge": "alto",
+    "score": 91,
+    "recommendation": "Não prossiga. O anúncio apresenta forte padrão de fraude.",
+    "reasons": [
+      "Promessa irreal de remuneração.",
+      "Empresa não informada.",
+      "Linguagem apelativa e pouco profissional."
+    ],
+    "salary": 12000,
+    "link": "https://ganhos-imediatos-vagas.biz",
+    "createdAt": "2026-03-09T17:25:00.000Z"
+  },
+  {
+    "id": "ANL-1012",
+    "title": "Desenvolvedor Back-End Node.js",
+    "company": "StackBridge",
+    "classification": "Confiável",
+    "badge": "baixo",
+    "score": 19,
+    "recommendation": "Vaga com boa consistência. Mantenha apenas a validação básica da empresa.",
+    "reasons": [
+      "Empresa identificada.",
+      "Tecnologias e requisitos coerentes.",
+      "Sem sinais de cobrança ou fraude."
+    ],
+    "salary": 6200,
+    "link": "https://stackbridge.io/careers/backend-node",
+    "createdAt": "2026-03-10T10:50:00.000Z"
+  },
+  {
+    "id": "ANL-1013",
+    "title": "Assistente Virtual com contratação imediata",
+    "company": "Start Business Group",
+    "classification": "Suspeita",
+    "badge": "medio",
+    "score": 58,
+    "recommendation": "Há sinais moderados de alerta. Verifique a empresa antes de compartilhar documentos.",
+    "reasons": [
+      "Contato do recrutador genérico.",
+      "Pouca informação institucional.",
+      "Urgência exagerada no anúncio."
+    ],
+    "salary": 4700,
+    "link": "https://startbusiness-group.org/jobs",
+    "createdAt": "2026-03-11T12:35:00.000Z"
+  },
+  {
+    "id": "ANL-1014",
+    "title": "QA Júnior",
+    "company": "Blue Test Systems",
+    "classification": "Confiável",
+    "badge": "baixo",
+    "score": 17,
+    "recommendation": "A vaga apresenta baixo risco e boa consistência.",
+    "reasons": [
+      "Empresa legítima e identificada.",
+      "Sem cobrança indevida.",
+      "Descrição compatível com a função."
+    ],
+    "salary": 3700,
+    "link": "https://bluetestsystems.com/jobs/qa-jr",
+    "createdAt": "2026-03-12T08:20:00.000Z"
+  }
+]

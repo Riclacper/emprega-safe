@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EmpregaSafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">
+            <img src="assets/logo.svg" alt="Logo EmpregaSafe" class="logo" />
+          </div>
+
+          <div class="brand-copy">
+            <strong>EmpregaSafe</strong>
+            <span>Verificação de vagas</span>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <button class="nav-link active" data-target="dashboard-section">Dashboard</button>
+          <button class="nav-link" data-target="analyze-section">Analisar vaga</button>
+          <button class="nav-link" data-target="history-section">Histórico</button>
+          <button class="nav-link" data-target="reports-section">Denúncias</button>
+          <button class="nav-link" data-target="about-section">Sobre o sistema</button>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Painel de monitoramento de vagas</h1>
+          <p>Analise anúncios, salve histórico e registre denúncias com fluxo centralizado.</p>
+        </div>
+        <div class="status-pill" id="apiStatus">Conectando API...</div>
+      </header>
+
+      <section id="dashboard-section" class="page-section active">
+        <div class="metrics-grid" id="metricsGrid"></div>
+
+        <div class="panel-grid two-columns">
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <span class="eyebrow">Resumo</span>
+                <h2>Classificação das análises</h2>
+              </div>
+            </div>
+            <div class="chart-box">
+              <canvas id="classificationChart"></canvas>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <span class="eyebrow">Tendência</span>
+                <h2>Evolução das análises</h2>
+              </div>
+            </div>
+
+            <div class="chart-box">
+              <canvas id="timelineChart"></canvas>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <span class="eyebrow">Radar</span>
+              <h2>Principais alertas recentes</h2>
+            </div>
+          </div>
+          <div id="riskReasons" class="reason-list compact"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <span class="eyebrow">Atividade</span>
+              <h2>Últimas análises realizadas</h2>
+            </div>
+          </div>
+          <div id="latestAnalyses" class="table-wrap"></div>
+        </section>
+      </section>
+
+      <section id="analyze-section" class="page-section">
+        <div class="panel-grid form-layout">
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <span class="eyebrow">Nova análise</span>
+                <h2>Enviar vaga para verificação</h2>
+              </div>
+            </div>
+
+            <form id="analysisForm" class="form-grid">
+              <div class="field full">
+                <label for="title">Título da vaga</label>
+                <input id="title" name="title" type="text" placeholder="Ex.: Analista de Suporte Júnior" required />
+              </div>
+
+              <div class="field">
+                <label for="company">Empresa</label>
+                <input id="company" name="company" type="text" placeholder="Nome da empresa" />
+              </div>
+
+              <div class="field">
+                <label for="salary">Salário informado</label>
+                <input id="salary" name="salary" type="number" min="0" step="0.01" placeholder="0,00" />
+              </div>
+
+              <div class="field">
+                <label for="contact">Contato do recrutador</label>
+                <input id="contact" name="contact" type="text" placeholder="email@empresa.com ou telefone" />
+              </div>
+
+              <div class="field">
+                <label for="link">Link da vaga</label>
+                <input id="link" name="link" type="url" placeholder="https://site-da-vaga.com" />
+              </div>
+
+              <div class="field full">
+                <label for="description">Descrição da vaga</label>
+                <textarea id="description" name="description" rows="8" placeholder="Cole aqui o texto da vaga para análise." required></textarea>
+              </div>
+
+              <div class="form-actions full">
+                <button class="btn btn-primary" type="submit">Analisar vaga</button>
+                <button class="btn btn-ghost" type="reset">Limpar</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel sticky-panel" id="resultPanel">
+            <div class="panel-header">
+              <div>
+                <span class="eyebrow">Resultado</span>
+                <h2>Parecer da análise</h2>
+              </div>
+            </div>
+
+            <div class="empty-state" id="resultEmpty">
+              <h3>Nenhuma análise enviada ainda</h3>
+              <p>Preencha o formulário ao lado para gerar o risco estimado da vaga.</p>
+            </div>
+
+            <div id="resultContent" class="hidden"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="history-section" class="page-section">
+        <section class="panel">
+          <div class="panel-header between">
+            <div>
+              <span class="eyebrow">Base local</span>
+              <h2>Histórico de verificações</h2>
+            </div>
+            <input id="historySearch" class="search-input" type="search" placeholder="Buscar por vaga ou empresa" />
+          </div>
+          <div id="historyTable" class="table-wrap"></div>
+        </section>
+      </section>
+
+      <section id="reports-section" class="page-section">
+        <div class="panel-grid two-columns">
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <span class="eyebrow">Denúncia</span>
+                <h2>Registrar vaga suspeita</h2>
+              </div>
+            </div>
+
+            <form id="reportForm" class="form-grid">
+              <div class="field full">
+                <label for="reportCompany">Empresa</label>
+                <input id="reportCompany" name="company" type="text" placeholder="Nome da empresa ou anúncio" />
+              </div>
+
+              <div class="field full">
+                <label for="reportLink">Link</label>
+                <input id="reportLink" name="link" type="url" placeholder="https://..." />
+              </div>
+
+              <div class="field full">
+                <label for="reportReason">Motivo da denúncia</label>
+                <input id="reportReason" name="reason" type="text" placeholder="Ex.: Cobrança indevida ou pedido de documentos sensíveis" required />
+              </div>
+
+              <div class="field full">
+                <label for="reportDetails">Detalhes</label>
+                <textarea id="reportDetails" name="details" rows="6" placeholder="Descreva o que aconteceu."></textarea>
+              </div>
+
+              <div class="form-actions full">
+                <button class="btn btn-primary" type="submit">Enviar denúncia</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <span class="eyebrow">Registro</span>
+                <h2>Denúncias Registradas</h2>
+              </div>
+            </div>
+            <div id="reportList" class="report-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="about-section" class="page-section">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <span class="eyebrow">Visão geral</span>
+              <h2>Sobre o EmpregaSafe</h2>
+            </div>
+          </div>
+          <div class="about-grid">
+            <article>
+              <h3>Objetivo</h3>
+              <p>O sistema analisa vagas de emprego com base em regras de risco para indicar sinais de fraude, cobrança indevida e exposição desnecessária de dados pessoais.</p>
+            </article>
+            <article>
+              <h3>Stack</h3>
+              <p>Node.js, Express, HTML, CSS e JavaScript puro. A persistência está em arquivos JSON para facilitar demonstração, testes e evolução posterior.</p>
+            </article>
+            <article>
+              <h3>Evolução sugerida</h3>
+              <p>Você pode migrar a persistência para MongoDB, adicionar autenticação, perfis de usuário, dashboards avançados e modelos de IA para classificação mais robusta.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
