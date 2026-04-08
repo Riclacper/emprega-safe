@@ -26,10 +26,9 @@ const elements = {
 };
 
 const API_BASE =
-  window.location.hostname === 'localhost' ||
-  window.location.hostname === '127.0.0.1'
+  window.location.hostname === 'localhost'
     ? 'http://localhost:3000'
-    : 'https://SEU-BACKEND.onrender.com';
+    : 'https://emprega-safe.onrender.com';
 
 async function api(path, options = {}) {
   const response = await fetch(`${API_BASE}${path}`, {
@@ -39,7 +38,7 @@ async function api(path, options = {}) {
 
   if (!response.ok) {
     const data = await response.json().catch(() => ({}));
-    throw new Error(data.message || 'Falha na comunicação com a API.');
+    throw new Error(data.message || 'Erro na API');
   }
 
   return response.json();
