@@ -31,8 +31,8 @@ const API_BASE =
     : 'https://emprega-safe.onrender.com';
 
 async function api(path, options = {}) {
-  const response = await fetch(`${API_BASE}${path}`, {
-    headers: { 'Content-Type': 'application/json' },
+const response = await fetch(`${API_BASE}/api${path}`, {
+      headers: { 'Content-Type': 'application/json' },
     ...options
   });
 
