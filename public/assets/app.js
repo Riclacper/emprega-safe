@@ -31,8 +31,8 @@ const API_BASE =
     : 'https://emprega-safe.onrender.com';
 
 async function api(path, options = {}) {
-const response = await fetch(`${API_BASE}/api${path}`, {
-      headers: { 'Content-Type': 'application/json' },
+  const response = await fetch(`${API_BASE}/api${path}`, {
+    headers: { 'Content-Type': 'application/json' },
     ...options
   });
 
@@ -505,13 +505,13 @@ function renderAll() {
 async function loadAll() {
   try {
     const [health, analyses, reports, stats] = await Promise.all([
-      api('/api/health'),
-      api('/api/analyses'),
-      api('/api/reports'),
-      api('/api/stats')
+      api('/health'),
+      api('/analyses'),
+      api('/reports'),
+      api('/stats')
     ]);
 
-    elements.apiStatus.textContent = health.message;
+    elements.apiStatus.textContent = health.message || 'API conectada';
     state.analyses = analyses;
     state.reports = reports;
     state.stats = stats;
@@ -551,14 +551,14 @@ function setupForms() {
     const payload = Object.fromEntries(formData.entries());
 
     try {
-      const analysis = await api('/api/analyze', {
+      const analysis = await api('/analyze', {
         method: 'POST',
         body: JSON.stringify(payload)
       });
 
       showToast('Vaga analisada com sucesso.');
       state.analyses.unshift(analysis);
-      state.stats = await api('/api/stats');
+      state.stats = await api('/stats');
       renderResult(analysis);
       renderAll();
       elements.analysisForm.reset();
@@ -581,14 +581,14 @@ function setupForms() {
     }
 
     try {
-      const report = await api('/api/report', {
+      const report = await api('/report', {
         method: 'POST',
         body: JSON.stringify(payload)
       });
 
       showToast('Denúncia registrada com sucesso.');
       state.reports.unshift(report);
-      state.stats = await api('/api/stats');
+      state.stats = await api('/stats');
       renderAll();
       elements.reportForm.reset();
     } catch (error) {
