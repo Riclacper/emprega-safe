@@ -17,6 +17,9 @@ app.use(cors({
 
 app.use(express.json({ limit: '2mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('/api/health', (req, res) => {
+  res.json({ ok: true });
+});
 
 function ensureFile(filePath, defaultValue) {
   if (!fs.existsSync(DATA_DIR)) {
